@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useLocation } from 'react-router'
+import { Link, Navigate, Route, Routes, useLocation } from 'react-router'
 import Navbar from './components/Navbar'
 import { useAuth } from './context/AuthContext'
 import Contact from './pages/Contact'
@@ -31,9 +31,9 @@ function NotFound() {
       <p className="eyebrow">404 — PAGE NOT FOUND</p>
       <h1>Lost in the notes<span>.</span></h1>
       <p>The page you are looking for does not exist.</p>
-      <a className="primary-button" href="/iwamad-sis2-blog/">
-        Back home
-      </a>
+      <Link className="primary-button" to="/">
+         Back home
+      </Link>
     </main>
   )
 }
